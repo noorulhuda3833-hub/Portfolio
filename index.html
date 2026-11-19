@@ -492,6 +492,44 @@ ul.pts li::before{
   font-family:var(--mono)
 }
 
+/* experience cards (with logos) */
+.job{padding:24px}
+.job::before{top:46px}
+.job-head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.logo{
+  flex:none;width:56px;height:56px;border-radius:12px;
+  background:#fff;border:1px solid var(--line);
+  display:grid;place-items:center;overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,.28)
+}
+.logo img{width:100%;height:100%;object-fit:contain;display:block}
+.logo.mono-logo{
+  background:linear-gradient(135deg,#1b2a3a,#0f1822);
+  color:var(--acc);font:600 17px var(--mono);letter-spacing:.02em
+}
+.job-title{flex:1;min-width:0}
+.job-title h3{font-size:18px;font-weight:700;margin:0;line-height:1.3}
+.job-title .co{margin:2px 0 0;font-size:14px}
+.job-title .co b{color:var(--text);font-weight:600}
+.job-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex:none}
+.job-meta .date{white-space:nowrap}
+.dur{font:400 11px var(--mono);color:var(--muted)}
+.now{
+  display:inline-flex;align-items:center;gap:6px;
+  font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  color:var(--acc);border:1px solid rgba(34,211,197,.4);
+  background:rgba(34,211,197,.08);padding:3px 9px;border-radius:999px
+}
+.now i{width:6px;height:6px;border-radius:50%;background:var(--acc);animation:ring 2s infinite}
+.job .tags{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.tl{max-width:100%}
+@media (max-width:720px){
+  .job{padding:20px}
+  .job-head{flex-wrap:wrap;gap:12px}
+  .job-title{flex-basis:calc(100% - 72px)}
+  .job-meta{flex-direction:row;align-items:center;flex-wrap:wrap;width:100%;justify-content:flex-start;gap:10px}
+}
+
 /* projects */
 .projects-grid{
   display:grid;
@@ -1204,7 +1242,7 @@ section:not(#home) .eyebrow.in::before{
           </div>
 
           <div class="stat">
-            <b data-to="2" data-d="0">2</b>
+            <b data-to="3" data-d="0">3</b>
             <span>Internships</span>
           </div>
 
@@ -1349,17 +1387,71 @@ section:not(#home) .eyebrow.in::before{
 
     <div class="tl">
 
+      <!-- RECURSO LABS -->
       <div class="card job rv">
-        <div class="top">
-          <h3>Software Engineer Intern</h3>
-          <span class="date">Aug 2026 — Oct 2026</span>
-        </div>
+        <div class="job-head">
+          <div class="logo">
+            <img src="recurso logo.png" alt="Recurso Labs logo" width="56" height="56" loading="lazy"/>
+          </div>
 
-        <p class="co">Rstack Labs</p>
+          <div class="job-title">
+            <h3>Ruby on Rails Intern</h3>
+            <p class="co"><b>Recurso Labs</b> · Lahore, Pakistan</p>
+          </div>
+
+          <div class="job-meta">
+            <span class="now"><i></i>Current</span>
+            <span class="date">Nov 2026 — Present</span>
+          </div>
+        </div>
 
         <ul class="pts">
           <li>
-            Developed Agency OS end to end, working across the Next.js
+            Developing backend application functionality in Ruby on Rails,
+            applying MVC architecture across routes, controllers and models.
+          </li>
+
+          <li>
+            Practicing database operations and backend development through
+            hands-on, project-style tasks.
+          </li>
+
+          <li>
+            Building problem-solving skills by working through practical
+            programming challenges and guided development exercises.
+          </li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">Ruby on Rails</span>
+          <span class="tag">Ruby</span>
+          <span class="tag">MVC</span>
+          <span class="tag">Routing</span>
+          <span class="tag">Databases</span>
+        </div>
+      </div>
+
+      <!-- RSTACK LABS -->
+      <div class="card job rv">
+        <div class="job-head">
+          <div class="logo">
+            <img src="rstack_labs_logo.jpg" alt="Rstack Labs logo" width="56" height="56" loading="lazy"/>
+          </div>
+
+          <div class="job-title">
+            <h3>Software Engineer Intern</h3>
+            <p class="co"><b>Rstack Labs</b></p>
+          </div>
+
+          <div class="job-meta">
+            <span class="date">Aug 2026 — Oct 2026</span>
+            <span class="dur">3 months</span>
+          </div>
+        </div>
+
+        <ul class="pts">
+          <li>
+            Developed <b style="color:var(--text);font-weight:600">Agency OS</b> end to end across the Next.js
             frontend, Ruby on Rails API, PostgreSQL database,
             authentication and deployment.
           </li>
@@ -1371,32 +1463,60 @@ section:not(#home) .eyebrow.in::before{
           </li>
 
           <li>
-            Deployed the application on Vercel, Render and Neon and
-            resolved database, Ruby version and gem dependency issues
-            during development and deployment.
+            Deployed on Vercel, Render and Neon, and resolved database,
+            Ruby version and gem dependency issues during development
+            and deployment.
           </li>
         </ul>
+
+        <div class="tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Ruby on Rails</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Action Cable</span>
+          <span class="tag">OpenRouter</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Render</span>
+          <span class="tag">Neon</span>
+        </div>
       </div>
 
+      <!-- UNIVERSITY IT DEPARTMENT -->
       <div class="card job rv">
-        <div class="top">
-          <h3>Application Team Member (Intern)</h3>
-          <span class="date">Apr 2026 — Jun 2026</span>
-        </div>
+        <div class="job-head">
+          <div class="logo mono-logo" aria-hidden="true">IT</div>
 
-        <p class="co">University IT Department</p>
+          <div class="job-title">
+            <h3>Application Team Member (Intern)</h3>
+            <p class="co"><b>University IT Department</b> · Team of 3</p>
+          </div>
+
+          <div class="job-meta">
+            <span class="date">Apr 2026 — Jun 2026</span>
+            <span class="dur">3 months</span>
+          </div>
+        </div>
 
         <ul class="pts">
           <li>
             Redesigned the university's affiliation website from scratch
-            in a team of 3, using HTML/CSS, Tailwind CSS, JavaScript and React.
+            as part of a 3-person team, using HTML/CSS, Tailwind CSS,
+            JavaScript and React.
           </li>
 
           <li>
-            Connected the new frontend to the existing Laravel backend;
-            the redesigned site was deployed for the university.
+            Connected the new frontend to the existing Laravel backend
+            and helped deploy the redesigned site for the university.
           </li>
         </ul>
+
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Laravel</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
       </div>
 
     </div>
